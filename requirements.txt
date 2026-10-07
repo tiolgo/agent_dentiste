@@ -1,0 +1,2 @@
+# Bibliothèque standard Python 3.11+ pour tout le reste (urllib pour Ollama, email, json...).
+psycopg[binary]>=3.1

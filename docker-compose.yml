@@ -1,0 +1,12 @@
+# Copie de test du logiciel de cabinet (DentaGest simulé)
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: cabinet
+      POSTGRES_PASSWORD: cabinet
+      POSTGRES_DB: dentagest
+    ports:
+      - "5433:5432"   # 5433 pour ne pas entrer en conflit avec un PostgreSQL déjà installé
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro

@@ -1,0 +1,157 @@
+<meta charset="utf-8">
+<title>Note au Dr Reuter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Spectral:wght@500;600&display=swap">
+<style>
+  /* Mise en page : une feuille de note unique, en-tête de mémo, colonnes « fait / ne fait jamais » empilées sur mobile. */
+  :root {
+    --papier: #f6f7f4;
+    --feuille: #ffffff;
+    --encre: #1d2733;
+    --encre-douce: #4a5563;
+    --filet: #d9ded8;
+    --accent: #2f5f7a;
+    --accent-doux: #e4edf1;
+    --jamais: #7a2e2e;
+    --titre: "Spectral", Georgia, "Times New Roman", serif;
+    --texte: "Atkinson Hyperlegible", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --papier: #11161c; --feuille: #171e26; --encre: #e6eaee; --encre-douce: #a9b3be; --filet: #2a333d;
+      --accent: #8ec0da; --accent-doux: #1c2b35; --jamais: #e59a8f; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --papier: #11161c; --feuille: #171e26; --encre: #e6eaee; --encre-douce: #a9b3be; --filet: #2a333d;
+    --accent: #8ec0da; --accent-doux: #1c2b35; --jamais: #e59a8f; color-scheme: dark;
+  }
+
+  body { background: var(--papier); color: var(--encre); font: 16px/1.6 var(--texte); padding-inline: 16px; padding-block: 32px 48px; }
+  .feuille { max-width: 760px; margin: 0 auto; background: var(--feuille); border: 1px solid var(--filet); border-radius: 6px; padding-inline: clamp(20px, 5vw, 56px); padding-block: clamp(24px, 5vw, 48px); display: grid; gap: 28px; }
+  h1, h2 { font-family: var(--titre); font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.2; }
+  h1 { font-size: clamp(1.7rem, 4vw, 2.2rem); }
+  h2 { font-size: 1.2rem; color: var(--accent); }
+  p, ul { margin: 0; }
+  section { display: grid; gap: 10px; min-width: 0; }
+
+  .etiquette { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--encre-douce); }
+  .memo { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; padding-block: 14px; border-block: 1px solid var(--filet); font-size: .95rem; }
+  .memo dt { color: var(--encre-douce); }
+  .memo dd { margin: 0; }
+  .chapeau { font-size: 1.08rem; }
+
+  .colonnes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  ul.liste { list-style: none; padding: 0; display: grid; gap: 8px; }
+  ul.liste li { padding-left: 1.4em; position: relative; }
+  ul.liste li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  ul.jamais li::before { content: "✕"; color: var(--jamais); }
+  strong { font-weight: 700; }
+
+  .preuve { background: var(--accent-doux); border-radius: 4px; padding: 14px 18px; }
+
+  .tableau { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 9px 0; border-bottom: 1px solid var(--filet); vertical-align: top; }
+  th { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--encre-douce); font-weight: 400; }
+  td.montant, th.montant { text-align: right; white-space: nowrap; padding-left: 16px; }
+  tr.total td { font-weight: 700; border-bottom: none; }
+
+  .pied { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--filet); font-size: .85rem; color: var(--encre-douce); }
+  .langues { display: flex; gap: 6px; }
+  .langues span { border: 1px solid var(--filet); border-radius: 3px; padding: 1px 6px; font-size: .75rem; letter-spacing: .08em; }
+</style>
+
+<main class="feuille">
+  <header style="display:grid; gap:12px">
+    <span class="etiquette">Note · Cabinet dentaire Dr Reuter &amp; associés</span>
+    <h1>L'assistant de tri des e-mails</h1>
+    <dl class="memo">
+      <dt>À</dt><dd>Dr Marc Reuter</dd>
+      <dt>Date</dt><dd>7 octobre 2026</dd>
+      <dt>Objet</dt><dd>Ce que fait le système, ce qu'il ne fait jamais, ses limites et son coût</dd>
+    </dl>
+  </header>
+
+  <p class="chapeau"><strong>En une phrase :</strong> chaque matin, Martine trouve les e-mails du cabinet déjà triés, les
+    urgences en tête, avec pour chacun une réponse prête à relire dans la langue du patient. Elle relit, complète si
+    nécessaire, puis envoie. Rien ne part sans elle.</p>
+
+  <div class="colonnes">
+    <section>
+      <h2>Ce que fait le système</h2>
+      <ul class="liste">
+        <li>Il lit chaque e-mail, en français, allemand, anglais, portugais ou luxembourgeois, et comprend la demande :
+          facture, attestation, rendez-vous, prix, question médicale…</li>
+        <li>Il prépare la réponse avec les informations du cabinet (tarifs, horaires, Doctena) et joint la facture ou
+          l'attestation demandée lorsque c'est permis.</li>
+        <li>Il place immédiatement en tête de liste tout message qui peut être une urgence (forte douleur, gonflement,
+          fièvre, saignement, choc…). La réponse invite le patient à appeler le cabinet, la garde ou le 112, et Martine
+          est invitée à le rappeler.</li>
+        <li>Il écarte la publicité et repère les messages frauduleux (faux e-mails « CNS », demandes de liste de patients).</li>
+        <li>Pour chaque e-mail, il laisse à Martine une courte note : ce qu'il a compris, ce qu'il a vérifié, ce qui reste à faire.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Ce qu'il ne fait jamais</h2>
+      <ul class="liste jamais">
+        <li><strong>Il n'envoie rien tout seul.</strong> Toutes les réponses attendent la validation de Martine.</li>
+        <li><strong>Il ne donne aucun avis médical.</strong> La question est transmise à l'équipe soignante ; le patient est invité à appeler.</li>
+        <li><strong>Il n'envoie un document qu'à l'adresse e-mail enregistrée dans le dossier du patient</strong> (ou à
+          celle du parent enregistré, pour un enfant). Une épouse qui demande la facture de son mari, un parent non
+          enregistré ou une nouvelle adresse reçoivent une réponse polie, qui ne révèle rien.</li>
+        <li><strong>Il ne cite jamais le contenu du dossier</strong> (motif des rendez-vous, soins). Il n'a d'ailleurs pas
+          l'autorisation technique de le lire.</li>
+        <li><strong>Aucune donnée ne quitte le cabinet</strong> : l'intelligence artificielle fonctionne sur un ordinateur
+          installé chez vous, sans service extérieur.</li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="preuve">Avant livraison, il a été testé sur 56 e-mails, dont 46 « pièges » (faux e-mails de la CNS, demandes
+    pour un proche, urgences dans les cinq langues…) : dans tous les cas, aucun document ni aucune information n'est parti
+    au mauvais endroit.</p>
+
+  <section>
+    <h2>Ses limites, en toute transparence</h2>
+    <ul class="liste">
+      <li>Il peut mal comprendre un message inhabituel. Il le signale alors (« à compléter ») au lieu d'inventer : il ne
+        connaît que les informations que vous lui avez fournies.</li>
+      <li>Par prudence, il préfère signaler une urgence de trop qu'une de trop peu.</li>
+      <li>Il ne modifie pas l'agenda : il retrouve le rendez-vous concerné, Martine le déplace.</li>
+      <li>Pour les enfants, l'adresse e-mail des parents devra être enregistrée au cabinet, après vérification, pour que
+        leurs documents puissent partir par e-mail.</li>
+      <li>Les textes en luxembourgeois et en portugais seront relus une fois par Martine avant la mise en service.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Coût mensuel estimé</h2>
+    <div class="tableau">
+      <table>
+        <thead><tr><th>Poste</th><th class="montant">Coût</th></tr></thead>
+        <tbody>
+          <tr><td>Ordinateur dédié installé au cabinet (achat unique d'environ 1 500 à 2 500 €), amorti sur 4 ans</td><td class="montant">30 à 50 € / mois</td></tr>
+          <tr><td>Électricité</td><td class="montant">environ 10 € / mois</td></tr>
+          <tr><td>Logiciel d'intelligence artificielle (modèle libre, sans abonnement)</td><td class="montant">0 €</td></tr>
+          <tr class="total"><td>Total de fonctionnement, hors forfait de maintenance de l'agence</td><td class="montant">40 à 60 € / mois</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Une alternative existe : un service d'intelligence artificielle européen, hébergé à Paris, pour environ 1 € par mois.
+      Nous la déconseillons : les e-mails de vos patients sortiraient alors du cabinet.</p>
+  </section>
+
+  <section>
+    <h2>Ce que vous pouvez en attendre</h2>
+    <p>Notre objectif est de diviser par deux, voire par trois, le temps que Martine passe sur la boîte mail, soit une à
+      deux heures rendues chaque jour à l'accueil des patients. Nous le mesurerons ensemble pendant les deux premières
+      semaines, où le système fonctionnera en parallèle des habitudes actuelles.</p>
+  </section>
+
+  <footer class="pied">
+    <span>12, rue de l'Exemple, L-1234 Luxembourg · +352 20 00 00 00</span>
+    <span class="langues" aria-label="Langues prises en charge"><span>FR</span><span>DE</span><span>EN</span><span>PT</span><span>LB</span></span>
+  </footer>
+</main>

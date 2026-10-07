@@ -1,0 +1,284 @@
+{
+ "116": {
+  "resume": "Mario Rossi demande le prix d'une détartrage.",
+  "langue": "de",
+  "intentions": [
+   "question_tarif"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "expediteur",
+  "prenom_concerne": "",
+  "nom_concerne": "",
+  "nom_signature": "Rossi",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 0,
+  "periode_annee": 0,
+  "date_rdv": "",
+  "heure_rdv": "",
+  "actions_rdv": [],
+  "type_attestation": "aucune",
+  "actes_tarif": [
+   "detartrage"
+  ],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": [
+   "Combien coûte une pulizia dei denti ?"
+  ]
+ },
+ "117": {
+  "resume": "L'e-mail ne contient aucun contenu pertinent.",
+  "langue": "en",
+  "intentions": [
+   "autre"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "inconnu",
+  "prenom_concerne": "",
+  "nom_concerne": "",
+  "nom_signature": "",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 0,
+  "periode_annee": 0,
+  "date_rdv": "",
+  "heure_rdv": "",
+  "actions_rdv": [],
+  "type_attestation": "aucune",
+  "actes_tarif": [
+   "autre_acte"
+  ],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": []
+ },
+ "121": {
+  "resume": "Thomas Schneider exprime son insatisfaction concernant une longue attente dans le cabinet dentaire.",
+  "langue": "de",
+  "intentions": [
+   "information_pratique"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "expediteur",
+  "prenom_concerne": "",
+  "nom_concerne": "",
+  "nom_signature": "Schneider",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 0,
+  "periode_annee": 0,
+  "date_rdv": "",
+  "heure_rdv": "",
+  "actions_rdv": [],
+  "type_attestation": "aucune",
+  "actes_tarif": [],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": [
+   "Quelle est la durée moyenne de l'attente dans le cabinet ?"
+  ]
+ },
+ "134": {
+  "resume": "L'expéditeur annule un rendez-vous prévu le 16 et demande de le remettre.",
+  "langue": "pt",
+  "intentions": [
+   "rendez_vous"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "expediteur",
+  "prenom_concerne": "",
+  "nom_concerne": "",
+  "nom_signature": "Joana",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 0,
+  "periode_annee": 0,
+  "date_rdv": "2026-10-16",
+  "heure_rdv": "",
+  "actions_rdv": [
+   "annuler",
+   "retard"
+  ],
+  "type_attestation": "aucune",
+  "actes_tarif": [],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": [
+   "Podemos remarcar?"
+  ]
+ },
+ "6": {
+  "resume": "Claire Dupont demande une attestation de présence pour un rendez-vous du 28 septembre et pose une question sur une gêne persistante après un traitement de canal.",
+  "langue": "fr",
+  "intentions": [
+   "demande_attestation",
+   "question_medicale"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "expediteur",
+  "prenom_concerne": "Claire",
+  "nom_concerne": "Dupont",
+  "nom_signature": "Dupont",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 0,
+  "periode_annee": 2025,
+  "date_rdv": "2025-09-28",
+  "heure_rdv": "",
+  "actions_rdv": [],
+  "type_attestation": "presence",
+  "actes_tarif": [],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": [
+   "Est-ce normal de ressentir une petite gêne en mâchant après un traitement de canal ?"
+  ]
+ },
+ "9": {
+  "resume": "La mère de Lena demande la facture de son enfant Lena pour le mois d'août.",
+  "langue": "lb",
+  "intentions": [
+   "demande_facture"
+  ],
+  "signes_urgence": [],
+  "urgence": "aucune",
+  "raisons_suspect": [],
+  "suspect": false,
+  "personne_concernee": "enfant",
+  "prenom_concerne": "Lena",
+  "nom_concerne": "Wagner",
+  "nom_signature": "Wagner",
+  "facture_numero": "",
+  "toutes_factures": false,
+  "periode_mois": 8,
+  "periode_annee": 2025,
+  "date_rdv": "",
+  "heure_rdv": "",
+  "actions_rdv": [],
+  "type_attestation": "aucune",
+  "actes_tarif": [],
+  "question_remboursement": false,
+  "infos_demandees": [],
+  "envoi_autre_adresse": "",
+  "questions_ouvertes": []
+ },
+ "8": {
+  "langue": "en",
+  "resume": "Piotr Kowalski s'excuse d'avoir manqué un rendez-vous la semaine dernière en raison d'une maladie et demande s'il sera facturé. Il souhaite également réserver un nouveau rendez-vous de consultation.",
+  "suspect": false,
+  "urgence": "aucune",
+  "date_rdv": "2026-10-11",
+  "heure_rdv": "",
+  "intentions": [
+   "question_facturation",
+   "rendez_vous"
+  ],
+  "actes_tarif": [],
+  "actions_rdv": [
+   "prendre"
+  ],
+  "nom_concerne": "Kowalski",
+  "periode_mois": 0,
+  "nom_signature": "Piotr",
+  "periode_annee": 2025,
+  "facture_numero": "",
+  "signes_urgence": [],
+  "infos_demandees": [],
+  "prenom_concerne": "Piotr",
+  "raisons_suspect": [],
+  "toutes_factures": false,
+  "type_attestation": "aucune",
+  "personne_concernee": "expediteur",
+  "questions_ouvertes": [
+   "Will I be charged for it?",
+   "I'd like to book a new check-up."
+  ],
+  "envoi_autre_adresse": "",
+  "question_remboursement": false
+ },
+ "1": {
+  "langue": "fr",
+  "resume": "Anne Muller demande un duplicata de la facture de son contrôle de septembre.",
+  "suspect": false,
+  "urgence": "aucune",
+  "date_rdv": "",
+  "heure_rdv": "",
+  "intentions": [
+   "demande_facture"
+  ],
+  "actes_tarif": [],
+  "actions_rdv": [],
+  "nom_concerne": "",
+  "periode_mois": 9,
+  "nom_signature": "Muller",
+  "periode_annee": 2025,
+  "facture_numero": "",
+  "signes_urgence": [],
+  "infos_demandees": [],
+  "prenom_concerne": "",
+  "raisons_suspect": [],
+  "toutes_factures": false,
+  "type_attestation": "aucune",
+  "personne_concernee": "expediteur",
+  "questions_ouvertes": [
+   "Pourriez-vous me renvoyer la facture de mon contrôle de septembre ?"
+  ],
+  "envoi_autre_adresse": "",
+  "question_remboursement": false
+ },
+ "3": {
+  "langue": "fr",
+  "resume": "Lucas Bernard demande le prix d'un détartrage et s'informe sur son remboursement par la CNS, sans être encore patient chez le cabinet.",
+  "suspect": false,
+  "urgence": "aucune",
+  "date_rdv": "",
+  "heure_rdv": "",
+  "intentions": [
+   "question_tarif",
+   "question_facturation"
+  ],
+  "actes_tarif": [
+   "detartrage"
+  ],
+  "actions_rdv": [],
+  "nom_concerne": "Bernard",
+  "periode_mois": 0,
+  "nom_signature": "Bernard",
+  "periode_annee": 0,
+  "facture_numero": "",
+  "signes_urgence": [],
+  "infos_demandees": [],
+  "prenom_concerne": "Lucas",
+  "raisons_suspect": [],
+  "toutes_factures": false,
+  "type_attestation": "aucune",
+  "personne_concernee": "expediteur",
+  "questions_ouvertes": [
+   "Combien coûte un détartrage ?",
+   "Est-ce remboursé par la CNS ?"
+  ],
+  "envoi_autre_adresse": "",
+  "question_remboursement": true
+ }
+}
